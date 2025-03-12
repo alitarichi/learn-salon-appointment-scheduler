@@ -156,3 +156,13 @@ chmod +x salon.sh
 touch salon.sql
 psql -U postgres < salon.sql
 psql --username=freecodecamp dbname=postgres
+[ -d "$HOME/bin" ]
+[ -d "$HOME/.local/bin" ]
+PATH="$HOME/.local/bin:$PATH"
+[ -e /home/gitpod/.nix-profile/etc/profile.d/nix.sh ]
+. /home/gitpod/.nix-profile/etc/profile.d/nix.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]]
+source "$HOME/.rvm/scripts/rvm"
+[[ -n $SSH_CONNECTION ]]
+cd "/workspace/project"
+'/home/gitpod/.vscode-server/cli/servers/Stable-2fc07b811f760549dab9be9d2bedd06c51dfcb9a/server/node' -p '"dd703230cf48" + JSON.stringify(process.env) + "dd703230cf48"'
